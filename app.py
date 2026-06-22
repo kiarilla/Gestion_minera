@@ -923,7 +923,7 @@ elif app_mode == "📈 Proyección Estratégica (2027-2031)":
         output_excel = BytesIO()
         
         # Usamos XlsxWriter para incrustar el panel de parámetros y el gráfico
-            with pd.ExcelWriter(output_excel, engine="xlsxwriter") as writer:
+        with pd.ExcelWriter(output_excel, engine="xlsxwriter") as writer:
             df_final_proy.to_excel(writer, sheet_name="Proyeccion_Estrategica", index=False)
             
             workbook = writer.book
